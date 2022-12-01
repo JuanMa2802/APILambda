@@ -1,0 +1,2 @@
+Ejecutar archivos = "Desde la carpeta base ejecutar este comando (python manage.py arconsa)"
+
