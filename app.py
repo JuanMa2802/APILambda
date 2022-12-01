@@ -14,14 +14,14 @@ def home():
 #Formulario de inscripción
 @app.route("/api/v1/FormularioInscripcion/<string:Id>")
 def FormularioInscripcion(Id):
-    respuesta = subprocess.run(["python", r"C:\Users\Juan Manuel Gaviria\Desktop\APILambda\scripts\FormInscription.py", Id], capture_output=True, timeout=120)
+    respuesta = subprocess.run(["python", r"C:\inetpub\wwwroot\APILambda\scripts\FormInscription.py", Id], capture_output=True, timeout=120)
     return "respuesta"
 
 
 #Ordenes de compra
 @app.route("/api/v1/OrdenesComprar/<string:Id>")
 def OrdenesComprar(Id):
-    respuesta = subprocess.run(["python", r"/scripts/RequestsArconsa/manage.py", "Arconsa", Id], capture_output=True)
+    respuesta = subprocess.run(["python", r"C:\inetpub\wwwroot\APILambda\scripts\RequestsArconsa\manage.py", "Arconsa", Id], capture_output=True)
 
     return respuesta.stdout
 
